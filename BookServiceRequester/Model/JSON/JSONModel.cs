@@ -25,7 +25,12 @@ namespace BookServiceRequester.Model.JSON
   }
 ]
      **/
-    public class BookList
+    /// <summary>
+    /// BookList er en Wrapper model klasse der indpakker en List<Book> liste.
+    /// Da JSON response fra Server er en Liste/Array (starter med "[" ) og ikke et objekt
+    /// pakkes JSON array ind i et RootObject som omdøbes BookList. DTO der modtages er Array!
+    /// </summary>
+    public class BookList //Oprindelig navgivet RootObject
     {
         public List<Book> books { get; set; }
     }
