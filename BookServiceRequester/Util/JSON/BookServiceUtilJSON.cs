@@ -24,7 +24,7 @@ namespace BookServiceRequester.Util.JSON
 
         /*
         * Bookmetoder Get
-        * http://bookserviceaseece.azurewebsites.net:1431/api/Books
+        * http://bookserviceaseece.azurewebsites.net:/api/Books
         */
         public BookList GetBooks()
         {
