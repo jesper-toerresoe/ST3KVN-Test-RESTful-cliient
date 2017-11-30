@@ -34,10 +34,41 @@ namespace BookServiceRequester.Util.JSON
         /// <returns></returns>
         public BookList GetBooks()
         {
-            BookList bl = new BookList(); 
+            BookList bl = new BookList();
             APIGetJSON<List<Book>> booklist = new APIGetJSON<List<Book>>(fullservicepath + "Books");
             bl.books = booklist.data;
             return bl;
+
+        }
+        public List<Book> GetBooksList()
+        {
+           
+            APIGetJSON<List<Book>> booklist = new APIGetJSON<List<Book>>(fullservicepath + "Books");
+            return booklist.data;
+           
+
+        }
+        public Book GetBook(String ID)
+        {
+
+            APIGetJSON<Book> book = new APIGetJSON<Book>(fullservicepath + "Books/" + ID);
+            return book.data;
+
+        }
+        //http://localhost:17568
+
+        public Book PutBook(Book book)
+        {
+
+            APIPutJSON<Book> pbook = new APIPutJSON<Book>(hostname, "api/Books/"+book.Id,book);
+            return pbook.data;
+
+        }
+        public Book PostBook(Book book)
+        {
+
+            APIPostJSON<Book> pbook = new APIPostJSON<Book>(hostname, "api/Books", book);
+            return pbook.data;
 
         }
     }
