@@ -183,5 +183,158 @@ namespace BookServiceRequester.Model.XML
         }
     }
 
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+    public partial class Book
+    {
+
+        private byte idField;
+
+        private string titleField;
+
+        private byte yearField;
+
+        private byte priceField;
+
+        private string genreField;
+
+        private byte authorIdField;
+
+        private BookAuthor authorField;
+
+        /// <remarks/>
+        public byte Id
+        {
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Title
+        {
+            get
+            {
+                return this.titleField;
+            }
+            set
+            {
+                this.titleField = value;
+            }
+        }
+
+        /// <remarks/>
+        public byte Year
+        {
+            get
+            {
+                return this.yearField;
+            }
+            set
+            {
+                this.yearField = value;
+            }
+        }
+
+        /// <remarks/>
+        public byte Price
+        {
+            get
+            {
+                return this.priceField;
+            }
+            set
+            {
+                this.priceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Genre
+        {
+            get
+            {
+                return this.genreField;
+            }
+            set
+            {
+                this.genreField = value;
+            }
+        }
+
+        /// <remarks/>
+        public byte AuthorId
+        {
+            get
+            {
+                return this.authorIdField;
+            }
+            set
+            {
+                this.authorIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public BookAuthor Author
+        {
+            get
+            {
+                return this.authorField;
+            }
+            set
+            {
+                this.authorField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class BookAuthor
+    {
+
+        private byte idField;
+
+        private string nameField;
+
+        /// <remarks/>
+        public byte Id
+        {
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+    }
+
+
 
 }
